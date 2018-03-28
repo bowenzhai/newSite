@@ -1,0 +1,38 @@
+<div>
+    <h1><%= config.author %></h1>
+    <p><%= config.subtitle %></p>
+</div>
+
+<div id="about-div">
+
+</div>
+<div id="portfolio-div">
+
+</div>
+<div id="work-div">
+
+</div>
+<div id="blog-div">
+    <ul>
+        <% page.posts.each(function(post){ %>
+            <li>
+                <h3>
+                    <a href="<%- url_for(post.path) %>">
+                        <%= post.title %>
+                    </a>
+                </h3>
+                <div>
+                    <%= date(post.date, config.date_format) %>
+                </div>
+                <% if(post.excerpt) { %>
+                    <p>
+                        <%- post.excerpt %>
+                    </p>
+                    <a href="<%- url_for(post.path) %>">
+                        ...Read More
+                    </a>
+                <% } %>
+            </li>
+        <% }) %>
+    </ul>
+</div>
