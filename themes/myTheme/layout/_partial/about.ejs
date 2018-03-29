@@ -1,0 +1,6 @@
+<div id="about-div">
+    <h3>A Little Bit About Myself</h3>
+    <% for(var value in site.data.selfIntro) { %>
+        <%- site.data.selfIntro[value] %> <br><br>
+    <% } %>
+</div>
