@@ -1,0 +1,8 @@
+- project1:
+    name: "Project1"
+    description: "This is a new project"
+    imageLink: "/images/project1.jpg"
+- project2:
+    name: "Project2"
+    description: "This is a new project"
+    imageLink: "/images/project2.jpg"
