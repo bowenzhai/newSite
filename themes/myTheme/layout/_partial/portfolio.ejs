@@ -1,0 +1,12 @@
+<div id="portfolio-div">
+    <h3>Some of my favorite projects</h3>
+    <ul>
+        <% for (var value in site.data.projectData) { %>
+            <li>
+                <img src="<%- site.data.projectData[value].imageLink %>">
+                <h4><%- site.data.projectData[value].name %></h4>
+                <p><%- site.data.projectData[value].description %></p>
+            </li>
+        <% } %>
+    </ul>
+</div>

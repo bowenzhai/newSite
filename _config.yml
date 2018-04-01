@@ -5,7 +5,7 @@
 # Site
 title: I'm Bowen
 subtitle:
-description:
+description: Bowen Zhai, UW CS class of 2020.
 author: Bowen Zhai
 language:
 timezone:
@@ -78,3 +78,9 @@ theme: myTheme
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type:
+
+node_sass:
+  debug: false
+  outputStyle: nested
+  precision: 5
+  sourceComments: false

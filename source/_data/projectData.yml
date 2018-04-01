@@ -1,8 +1,16 @@
-- project1:
-    name: "Project1"
-    description: "This is a new project"
+project1:
+    name: "Project 1"
+    description: "This is a description for project 1"
     imageLink: "/images/project1.jpg"
-- project2:
-    name: "Project2"
-    description: "This is a new project"
+project2:
+    name: "Project 2"
+    description: "This is a description for project 2"
     imageLink: "/images/project2.jpg"
+project3:
+    name: "Project 3"
+    description: "This is a description for project 3"
+    imageLink: "/images/project3.jpg"
+project4:
+    name: "Project 4"
+    description: "This is a description for project 4"
+    imageLink: "/images/project4.jpg"

@@ -1,32 +1,5 @@
 <%- partial('_partial/title') %>
 <%- partial('_partial/about') %>
-<div id="portfolio-div">
-
-</div>
-<div id="work-div">
-
-</div>
-<div id="blog-div">
-    <ul>
-        <% page.posts.each(function(post){ %>
-            <li>
-                <h3>
-                    <a href="<%- url_for(post.path) %>">
-                        <%= post.title %>
-                    </a>
-                </h3>
-                <div>
-                    <%= date(post.date, config.date_format) %>
-                </div>
-                <% if(post.excerpt) { %>
-                    <p>
-                        <%- post.excerpt %>
-                    </p>
-                    <a href="<%- url_for(post.path) %>">
-                        ...Read More
-                    </a>
-                <% } %>
-            </li>
-        <% }) %>
-    </ul>
-</div>
+<%- partial('_partial/portfolio') %>
+<%- partial('_partial/work') %>
+<%- partial('_partial/blog') %>

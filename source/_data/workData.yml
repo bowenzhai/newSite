@@ -1,0 +1,33 @@
+job1:
+    company: "Company 1"
+    position: "Position"
+    time: "Jan 2012 - May 2012"
+    location: "City PR"
+    description: |-
+        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        • Nam scelerisque at ipsum sollicitudin maximus.
+        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
+        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+    imageLink: "/images/company1.jpg"
+job2:
+    company: "Company 2"
+    position: "Position"
+    time: "Jan 2012 - May 2012"
+    location: "City PR"
+    description: |-
+        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        • Nam scelerisque at ipsum sollicitudin maximus.
+        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
+        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+    imageLink: "/images/company2.jpg"
+job3:
+    company: "Company 3"
+    position: "Position"
+    time: "Jan 2012 - May 2012"
+    location: "City PR"
+    description: |-
+        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        • Nam scelerisque at ipsum sollicitudin maximus.
+        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
+        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+    imageLink: "/images/company3.jpg"

@@ -1,0 +1,12 @@
+link1:
+    href: "resume.pdf"
+    iconClass: "fa fa-file-text"
+link2:
+    href: "mailto:bwzhai@edu.uwaterloo.ca"
+    iconClass: "fa fa-envelope"
+link3:
+    href: "https://github.com/bowenzhai"
+    iconClass: "fa fa-github"
+link4:
+    href: "https://ca.linkedin.com/in/bowen-zhai-15994b120"
+    iconClass: "fa fa-linkedin"
