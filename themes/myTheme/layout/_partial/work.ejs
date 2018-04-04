@@ -1,11 +1,11 @@
 <div id="work-div">
     <h3>Places I Worked At</h3>
-    <ul>
+    <div>
         <% for (var value in site.data.workData) { %>
-            <li>
+            <div>
                 <img src="<%- site.data.workData[value].imageLink %>">
                 <p>
-                    <%- site.data.workData[value].company %>
+                    <b><%- site.data.workData[value].company %></b>
                     <br>
                     <%- site.data.workData[value].position %>
                     <br>
@@ -16,7 +16,7 @@
                 <p>
                     <%- site.data.workData[value].description.replace(/\n/g, "<br>") %>
                 </p>
-            </li>
+            </div>
         <% } %>
-    </ul>
+    </div>
 </div>

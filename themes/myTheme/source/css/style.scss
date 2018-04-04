@@ -4,13 +4,20 @@ $regular: 400;
 $light: 300;
 $grey: #E0E0E0;
 $bluegrey: #828A9E;
-$dullred: #C26868;
+$mutedred: #C26868;
+$darkgrey: #333333;
 
 body {
     font-family: $roboto;
     font-weight: $regular;
+    color: $darkgrey;
     text-align: center;
     margin: 0;
+
+    a {
+        color: $mutedred;
+        text-decoration: none;
+    }
 
     h1 {
         font-weight: $light;
@@ -28,6 +35,15 @@ body {
         padding-bottom: 50px;
     }
 
+    h4 {
+        font-size: 20px;
+    }
+
+    h5 {
+        font-weight: $light;
+        font-size: 12px;
+    }
+
     p {
         font-weight: $light;
         font-size: 14px;
@@ -39,12 +55,24 @@ body {
         font-size: 10px;
     }
 
-    > div {
-        padding: 7% 10%;
+    li {
+        list-style-type: none;
     }
 
-    > div:nth-child(odd) {
+    > div {
+        padding: 5% 25%;
+    }
+
+    > div:nth-of-type(odd) {
         background: $grey;
+    }
+
+    > div:nth-of-type(4n) {
+        background: $mutedred;
+    }
+
+    > div:nth-of-type(4n+2) {
+        background: $bluegrey;
     }
 
     #title-div {
@@ -56,8 +84,165 @@ body {
     }
 
     #about-div {
-        p {
-            padding: 0 20%;
+
+    }
+
+    #portfolio-div {
+        padding: 5% 10%;
+
+        img {
+            height: 200px;
+            width: 200px;
+        }
+
+        ul {
+            column-count: 4;
+            padding: 0 10%;
+        }
+
+        > div {
+            position: relative;
+            height: 100px;
+
+            div {
+                opacity: 0;
+                top: 0;
+                position: absolute;
+                width: 70%;
+                height: 100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    #work-div {
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            padding: 0 20px;
+        }
+
+        > div {
+            margin-left: -10%;
+
+            div {
+                display: flex;
+                justify-content: flex-end;
+                padding-bottom: 100px;
+
+                p:nth-of-type(1) {
+                    text-align: right;
+                    padding: 0 20px;
+                    margin: 0;
+                    line-height: 150%;
+                }
+
+                p:nth-of-type(2) {
+                    text-align: left;
+                    padding: 0 20px;
+                    margin: 0;
+                    line-height: 200%;
+                }
+            }
+        }
+    }
+
+    #blog-div {
+        > a {
+            text-transform: uppercase;
+        }
+    }
+
+    #footer-div {
+        padding-bottom: 0;
+
+        form {
+            padding-bottom: 20px;
+
+            input {
+                display: block;
+                margin: auto;
+            }
+
+            input[type="email"], textarea, input[type="submit"] {
+                font-family: $roboto-mono;
+                color: $darkgrey;
+                margin: 0 auto;
+                margin-bottom: 20px;
+                padding: 10px;
+                width: 70%;
+            	background: none;
+                border: 2px solid $darkgrey;
+            }
+
+            input[type="email"]:focus, textarea:focus, input[type="submit"]:focus {
+            	outline: none;
+            }
+
+            input[type="email"] {
+                min-height: 20px;
+            }
+
+            input[type="submit"] {
+                width: 15%;
+            }
+
+            input[type="submit"]:hover {
+                background-color: $darkgrey;
+                color: white;
+                cursor: pointer;
+            }
+
+            input[type="submit"]:focus {
+                background-color: transparent;
+                color: $darkgrey;
+            }
+
+            textarea {
+                resize: vertical;
+                min-height: 150px;
+            }
+        }
+
+        ul {
+            column-count: 4;
+            width: 40%;
+            margin: auto;
+            padding: 0;
+            padding-bottom: 100px;
+        }
+
+        li {
+            width: 20px;
+            margin: 0 auto;
+
+            a {
+                color: $darkgrey;
+
+                i {
+                    font-size: 24px;
+                }
+            }
+        }
+
+        footer {
+            padding: 20px 0;
+        }
+    }
+
+    .post {
+        text-align: left;
+        margin-bottom: 100px;
+
+        h4 {
+            margin-top: 0;
+
+            a {
+                color: $darkgrey;
+            }
         }
     }
 }
