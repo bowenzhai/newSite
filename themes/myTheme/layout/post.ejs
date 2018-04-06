@@ -1,11 +1,14 @@
-<nav>
+<nav id="top-nav">
     <a href='/'>Home</a>
     <a href='/archives'>Archive</a>
 </nav>
 <div id="post-div">
-    <h1><%- page.title %></h1>
-    <div>
+    <h3><%- page.title %></h3>
+    <h5>
         <%= date(page.date, config.date_format) %>
+    </h5>
+    <hr>
+    <div id="post-content">
+        <%- page.content %>
     </div>
-    <%- page.content %>
 </div>
