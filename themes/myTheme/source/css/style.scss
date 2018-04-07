@@ -82,16 +82,25 @@ body {
         width: 10%;
         z-index: 1;
 
-        #side-nav-indicator {
-            width: 16px;
-            height: 16px;
-            border-radius: 50%;
-            background: $darkgrey;
-            margin: 0;
+        #side-nav-indicator-container {
+            top: 44%;
             position: absolute;
+            height: 36px;
+            margin-top: 20px;
+            width: 16px;
+            left: 100%;
             float: right;
-            right: -8px;
-            top: 48%;
+            transform: translateX(-50%);
+
+            #side-nav-indicator {
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background: $darkgrey;
+                position: relative;
+                top: 50%;
+                transform: translateY(-50%);
+            }
         }
 
         #side-nav-links {
@@ -99,19 +108,23 @@ body {
             height: 100%;
             top: 44%;
             position: absolute;
-        }
+            transition: transform 0.5s;
 
-        a {
-            font-weight: $light;
-            color: $darkgrey;
-            display: block;
-            text-align: right;
-            font-size: 18px;
-            margin: 20% 0;
-        }
+            a {
+                height: 36px;
+                line-height: 36px;
+                font-weight: $light;
+                color: $darkgrey;
+                display: block;
+                text-align: right;
+                font-size: 18px;
+                margin: 20px 0;
+                transition: font-size 0.5s;
+            }
 
-        a.current-section {
-            font-size: 36px;
+            a.current-section {
+                font-size: 36px;
+            }
         }
     }
 
@@ -119,15 +132,35 @@ body {
         padding: 0;
         height: 100vh;
 
-        > div {
+        #title-content {
             position: relative;
             top: 25%;
+            img {
+                border: 1px solid black;
+                border-radius: 50%;
+                padding: 15px;
+            }
+
+            a {
+                text-transform: uppercase;
+                margin-top: 40px;
+                display: block;
+            }
         }
 
-        img {
-            border: 1px solid black;
-            border-radius: 50%;
-            padding: 15px;
+        #down {
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: 3%;
+            a {
+                color: $darkgrey;
+
+                i {
+                    font-size: 28px;
+                }
+            }
         }
     }
 
