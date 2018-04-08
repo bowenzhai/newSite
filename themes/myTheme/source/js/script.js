@@ -26,10 +26,18 @@ $(function() {
 
 	// set active nav link
 	function setActive(index) {
-		var translateAmout = index * -56;
+		var translateAmout = index * -52;
 		$("#side-nav-links .current-section").removeClass("current-section");
 		$("#side-nav-links a").eq(index).addClass("current-section");
 		var translation = "translateY(" + translateAmout + "px)";
 		$("#side-nav-links").css("transform", translation);
 	}
+
+	// project hover
+	$("#project-container img").each(function (index) {
+		$(this).hover(function() {
+			$("#project-description div").css("opacity", 0);
+			$("#project-description div").eq(index).css("opacity", 1);
+		});
+	});
 });

@@ -1,33 +1,32 @@
 job3:
-    company: "Company 3"
-    position: "Position"
-    time: "Jan 2012 - May 2012"
-    location: "City PR"
+    company: "IFDS Canada Ltd."
+    position: "R&D Developer"
+    time: "Jan 2018 - Apr. 2018"
+    location: "Toronto ON, Canada"
     description: |-
-        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        • Nam scelerisque at ipsum sollicitudin maximus.
-        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
-        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+        • Developed Node.js local search engine that OCRs and indexes files in Elasticsearch
+        • Architected Spring Boot backend, designed and implemented frontend using Adobe Animate CC and jQuery for a live meeting dashboard
+        • Built an interactive Know your customer visualization using Unity, C# and CouchDB
+        • Worked collaboratively to build and present a Google Home financial voice assistant PoC. Lead the development of Android client using Kotlin and MVP architecture. Constructed the agent using Dialogflow, Firebase fulfillment and Watson API
     imageLink: "/images/ifds.png"
 job2:
-    company: "Company 2"
-    position: "Position"
-    time: "Jan 2012 - May 2012"
-    location: "City PR"
+    company: "SAP Canada Inc."
+    position: "Mobile Developer"
+    time: "May 2017 - Aug. 2017"
+    location: "Waterloo ON, Canada"
     description: |-
-        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        • Nam scelerisque at ipsum sollicitudin maximus.
-        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
-        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+        • Integrated new features into SAP’s enhanced mobile runtime for web applications
+        • Developed consent plugin for Cordova which enforced transparency and security
+        • Wrote native Android app that achieves CRUD and sync for a CMIS document repo
+        • Enhanced starter apps such as Offline OData for developers using SAP’s mobile SDK
     imageLink: "/images/sap.jpg"
 job1:
-    company: "Company 1"
-    position: "Position"
-    time: "Jan 2012 - May 2012"
-    location: "City PR"
+    company: "Veriday Inc."
+    position: "Software Developer"
+    time: "Aug. 2016 - Dec. 2016"
+    location: "Mississauga ON, Canada"
     description: |-
-        • Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        • Nam scelerisque at ipsum sollicitudin maximus.
-        • Vestibulum suscipit, diam hendrerit euismod tempus, ex ligula mollis metus, vitae lobortis velit justo ac sapien.
-        • Vivamus ultrices lacus quis malesuada tristique. In faucibus sapien sed consectetur pulvinar.
+        • Built and maintained websites for large scale financial and banking institutes
+        • Designed and implemented responsive web pages and interactive elements
+        • Developed Chrome extension for Veriday software that sped up production workflow
     imageLink: "/images/veriday.png"

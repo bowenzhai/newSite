@@ -5,7 +5,7 @@ $light: 300;
 $grey: #E0E0E0;
 $bluegrey: #828A9E;
 $mutedred: #C26868;
-$darkgrey: #333333;
+$darkgrey: #222222;
 
 body {
     font-family: $roboto;
@@ -85,7 +85,7 @@ body {
         #side-nav-indicator-container {
             top: 44%;
             position: absolute;
-            height: 36px;
+            height: 32px;
             margin-top: 20px;
             width: 16px;
             left: 100%;
@@ -111,19 +111,19 @@ body {
             transition: transform 0.5s;
 
             a {
-                height: 36px;
-                line-height: 36px;
+                height: 32px;
+                line-height: 32px;
                 font-weight: $light;
                 color: $darkgrey;
                 display: block;
                 text-align: right;
-                font-size: 18px;
+                font-size: 16px;
                 margin: 20px 0;
                 transition: font-size 0.5s;
             }
 
             a.current-section {
-                font-size: 36px;
+                font-size: 32px;
             }
         }
     }
@@ -134,7 +134,7 @@ body {
 
         #title-content {
             position: relative;
-            top: 25%;
+            top: 20%;
             img {
                 border: 1px solid black;
                 border-radius: 50%;
@@ -169,19 +169,31 @@ body {
     }
 
     #portfolio-div {
-        padding: 5% 10%;
+        padding: 5% 25%;
+
+        #project-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
 
         img {
             height: 200px;
             width: 200px;
+            transition: all 0.5s;
+            position: relative;
+            top: 10px;
+            left: 10px;
         }
 
-        ul {
-            column-count: 4;
-            padding: 0 10%;
+        img:hover {
+            top: 5px;
+            left: 5px;
+            box-shadow: 10px 10px 50px -6px rgba(120,120,120,1);
         }
 
-        > div {
+        #project-description {
             position: relative;
             height: 100px;
 
@@ -194,6 +206,7 @@ body {
                 left: 0;
                 right: 0;
                 margin: auto;
+                transition: opacity 0.5s;
             }
         }
     }
@@ -206,12 +219,13 @@ body {
             padding: 0 20px;
         }
 
-        > div {
+        #work-container {
             div {
                 display: flex;
                 padding-bottom: 100px;
 
                 p:nth-of-type(1) {
+                    min-width: 160px;
                     text-align: right;
                     padding: 0 20px;
                     margin: 0;

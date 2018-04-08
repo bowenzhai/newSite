@@ -1,16 +1,12 @@
 project1:
-    name: "Project 1"
-    description: "This is a description for project 1"
-    imageLink: "/images/project1.jpg"
+    name: "Financial Chatbot"
+    description: "A cohesive and modern financial assistant experience built with Dialogflow, Firebase, Node and Android Studio."
+    imageLink: "/images/googleHome.jpg"
 project2:
-    name: "Project 2"
-    description: "This is a description for project 2"
-    imageLink: "/images/project2.jpg"
+    name: "Hexo Theme"
+    description: "Theme for Hexo blog framework, designed with Figma, coded in EJS, SCSS and jQuery. Used on this site!"
+    imageLink: "/images/hexo.jpg"
 project3:
-    name: "Project 3"
-    description: "This is a description for project 3"
-    imageLink: "/images/project3.jpg"
-project4:
-    name: "Project 4"
-    description: "This is a description for project 4"
-    imageLink: "/images/project4.jpg"
+    name: "Get Benched"
+    description: "An Android CPU benchmarking tool using Android Studio and Java, quantifies performance by measuring SHA-1 encryption runtime."
+    imageLink: "/images/android.jpg"
