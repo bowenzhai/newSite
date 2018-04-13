@@ -47,6 +47,7 @@ body {
     p {
         font-weight: $light;
         font-size: 14px;
+        line-height: 150%;
     }
 
     li {
@@ -229,7 +230,6 @@ body {
                     text-align: right;
                     padding: 0 20px;
                     margin: 0;
-                    line-height: 150%;
                 }
 
                 p:nth-of-type(2) {
