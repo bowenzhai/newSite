@@ -20,6 +20,8 @@ Frist, I created a folder containing the OpenGL project, with subfolders /build,
 
 Next, I needed to grab another library called [Glad](http://glad.dav1d.de/). It is a web service that generates the OpenGL extension loading library according to our needs. Follow the screen below and generate the zip, unzip and place the contents in /libraries as well.
 
+{% asset_img glad.PNG Glad config %}
+
 Now, following the tutorial I wrote a C++ OpenGL [program](https://learnopengl.com/code_viewer_gh.php?code=src/1.getting_started/1.2.hello_window_clear/hello_window_clear.cpp) that opens a 800x600 window, and placed it in /source.
 
 Finally, I wrote a Cmake script that builds the GLFW source tree along with my program.
@@ -74,21 +76,60 @@ make
 ./Window
 ```
 {% asset_img cmake.PNG Cmake success %}
+
 {% asset_img make.PNG Make success %}
 
 Both cmake and make succeeded! But the program gave an output of "Failed to create GLFW window".
 
+But why is that? Is the X server not communicating properly with WSL? I tried to run glxgears, and it did show up...
+
+{% asset_img gears.PNG Some gears %}
+
+Eager to find out more, I added the debug statement in main().
+```
+static void error_callback(int error, const char* description)
+{
+    fprintf(stderr, "Error: %s\n", description);
+}
+
+glfwSetErrorCallback(error_callback);
+```
+
+In addition to the failure message, it also printed `Error: X11: RandR gamma ramp support seems broken`.
+
+After finding no solution online, I used another X window server, Xming. Unfortunately, it prints another error: `Error: GLX: GLX version 1.3 is required`. First off, what is GLX? It is an extension (one that Glad finds) that provides an interface between the X Window system and OpenGL. And since we're technically developing in a Linux environment, Glad grabs GLX for us (If Windows, it grabs WGL. If macOS, it grabs CGL). And it seems like Xming's GLX support is capped at 1.2, so I had to find another X server, again.
+
+My last resort seems to be Cygwin/X. Installing it was a bit of a pain, since X was not installed by default, so I had to go back and run the installer again. Interestingly, after starting Cygwin/X the X server was not detected at all. Thankfully, this [superuser post](https://superuser.com/questions/1180005/cygwin-x-and-windows-subsystem-for-linux) gave some insight. tldr: it does not listen by default, and you need to work around xauth.
+
+Turns out Cygwin/X has four modes of rendering, each with a different flag to trigger. I tried each and here were the results:
 
 
+| Type     |                       Software                        |          Hardware                                    |
+|:--------:|:-----------------------------------------------------:|:----------------------------------------------------:|
+| indirect (export LIBGL_ALWAYS_INDIRECT=1) |  Error: GLX: Failed to create context: GLXBadFBConfig | Error: Requested OpenGL version 3.3, got version 1.4 |
+| direct   |    X Error of failed request:  GLXBadContext          |   X Error of failed request:  GLXBadContext          |
 
+Using indirect hardware rendering seems the closest to success. But why is OpenGL version returning 1.4? A quick `glxinfo` brings up the following:
 
+{% asset_img glxinfo.PNG glxinfo %}
 
+It is recognizing the GPU, and it seems that the max it supports is 4.5. But (1.4) is always appended in front. After another round of research, it turns out that the GLX portion of various Windows X servers only support up to OpenGL 1.4. Setting MESA_GL_VERSION_OVERRIDE in Cygwin does not resolve, either, as it sets the output of GPU supported OpenGL but is always capped by that limit.
 
+And the reason only indirect rendering works is because by using a Windows native X server like Xming, you are getting Linux applications to connect to the X server via a localhost TCP connection, and then redirecting all of their OpenGL calls to the X server, to be rendered in Windows Land.
 
+## Moving On
+So far, trying to develop OpenGL on WSL seemed like a futile attempt. However, for a beginner, failure is always a part of learning. Here are a few takeaways:
+- Future setup for OpenGL development on Linux should be a breeze
+- Learned what extensions are and what they do
+- Learned the difference between direct and indirect rendering
+- Learned how to link libraries with Cmake
+- Saved massive amount of time by learning WSL's limitations ahead of CS488
 
+I'm also thinking about how I should develop OpenGL in the future. Obviously, native is the way to go, but if I stick with Windows I have to deal with Visual Studio. On the other hand, I'm running out of drive space to actually dual boot Linux at this time of year...(Totally not because of games). With both Windows Redstone 4 and Ubuntu 18.04 LTS around the corner, it seems like a good opportunity to fresh install both and get ready for the next semester!
 
-
+Oh, and if you who are reading this actually can run OpenGL programs in WSL, please let me know down below 👇
 
 ## References
 https://learnopengl.com/
 http://www.glfw.org/
+http://x.cygwin.com/docs/ug/using-glx.html

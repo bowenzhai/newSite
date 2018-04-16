@@ -56,6 +56,24 @@ body {
         line-height: 150%;
     }
 
+    table, th, td {
+        border: 2px solid black;
+        font-weight: $light;
+        font-size: 14px;
+        line-height: 150%;
+        border-collapse: collapse;
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    pre, code {
+        font-family: $roboto-mono;
+        font-size: 12px;
+        font-weight: $regular;
+    }
+
     footer {
         font-family: $roboto-mono;
         font-weight: $light;
@@ -63,7 +81,7 @@ body {
     }
 
     > div {
-        padding: 5% 25%;
+        padding: 4% 25%;
     }
 
     > div:nth-of-type(odd) {
@@ -172,7 +190,6 @@ body {
     }
 
     #portfolio-div {
-        padding: 5% 25%;
 
         #project-container {
             display: flex;
@@ -225,7 +242,7 @@ body {
         #work-container {
             div {
                 display: flex;
-                padding-bottom: 100px;
+                padding-bottom: 7%;
 
                 p:nth-of-type(1) {
                     min-width: 160px;
@@ -306,7 +323,7 @@ body {
             width: 40%;
             margin: auto;
             padding: 0;
-            padding-bottom: 100px;
+            padding-bottom: 5%;
         }
 
         li {
@@ -344,6 +361,8 @@ body {
     }
 
     #post-div {
+        padding-top: 7%;
+
         > h3 {
             padding: 0;
         }
@@ -365,6 +384,13 @@ body {
             padding: 0;
         }
 
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: $regular;
+        }
+
+        img {
+            max-width: 100%;
+        }
     }
 
 
