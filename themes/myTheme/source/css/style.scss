@@ -185,16 +185,11 @@ body {
         }
     }
 
-    #about-div {
-
-    }
-
     #portfolio-div {
 
         #project-container {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 50px;
             flex-wrap: wrap;
         }
 
@@ -205,6 +200,7 @@ body {
             position: relative;
             top: 10px;
             left: 10px;
+            margin-bottom: 20%;
         }
 
         img:hover {
@@ -215,7 +211,7 @@ body {
 
         #project-description {
             position: relative;
-            height: 100px;
+            height: 180px;
 
             div {
                 opacity: 0;
@@ -232,17 +228,17 @@ body {
     }
 
     #work-div {
-        img {
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
-            padding: 0 20px;
-        }
-
         #work-container {
             div {
                 display: flex;
                 padding-bottom: 7%;
+
+                img {
+                    width: 70px;
+                    height: 70px;
+                    border-radius: 50%;
+                    padding: 0 20px;
+                }
 
                 p:nth-of-type(1) {
                     min-width: 160px;
@@ -298,7 +294,7 @@ body {
             }
 
             input[type="submit"] {
-                width: 15%;
+                width: 100px;
             }
 
             input[type="submit"]:hover {
@@ -391,6 +387,10 @@ body {
         img {
             max-width: 100%;
         }
+
+        figure {
+            overflow: scroll;
+        }
     }
 
 
@@ -403,6 +403,156 @@ body {
 
             a {
                 color: $darkgrey;
+            }
+        }
+    }
+
+    /*iPad and iPad Pro*/
+    @media (max-width: 1024px) {
+        > div, #top-nav {
+            padding: 6% 14%;
+        }
+
+        #side-nav {
+            display: none;
+        }
+
+        #work-div {
+            #work-container {
+                div {
+                    flex-wrap: wrap;
+
+                    p:nth-of-type(1) {
+                        text-align: left;
+                        margin-bottom: 30px;
+                    }
+    
+                    p:nth-of-type(2) {
+                        text-align: left;
+                        width: 100%;
+                        margin-bottom: 40px;
+                    }
+                }  
+            }
+        }
+
+        #footer-div {
+            form {
+                input[type="email"], textarea {
+                    width: 90%;
+                }
+            }
+        }
+
+        #post-div {
+            padding-top: 10%;
+        }
+    }
+
+    /*Google Pixel*/
+    @media (max-width: 500px) {
+        h1 {
+            font-size: 56px;
+        }
+
+        h2 {
+            font-size: 14px;
+        }
+
+        > div {
+            padding: 14% 12%;
+        }
+
+        #top-nav {
+            padding: initial 12%;
+        }
+
+        #title-div {
+            padding: 0 12%;
+
+            #title-content {
+                position: relative;
+                top: 10%;
+
+                img {
+                    width: 50%;
+                    height: 50%;
+                }
+            }
+        }
+
+        #portfolio-div {
+            img {
+                width: 140px;
+                height: 140px;
+            }
+
+            #project-description {
+                div {
+                    width: 100%;
+                }
+            }
+        }
+
+        #work-div {
+            #work-container {
+                div {
+                    img {
+                        margin: 0 auto 30px auto;
+                    }
+
+                    p:nth-of-type(1) {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }  
+            }
+        }
+
+        #footer-div {
+            ul {
+                width: 70%;
+                padding-bottom: 10%;
+            }
+        }
+
+        #post-div {
+            padding-top: 14%;
+        }
+    }
+
+    /*iPhone 6/7/8/X*/
+    @media (max-width: 400px) {
+        h1 {
+            font-size: 48px;
+        }
+
+        h2 {
+            font-size: 13px;
+        }
+
+        #portfolio-div {
+            img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+    }
+
+    /*iPhone 4/5*/
+    @media (max-width: 320px) {
+        h1 {
+            font-size: 44px;
+        }
+
+        h2 {
+            font-size: 11px;
+        }
+
+        #portfolio-div {
+            img {
+                width: 100px;
+                height: 100px;
             }
         }
     }

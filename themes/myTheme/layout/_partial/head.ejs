@@ -10,7 +10,7 @@
 <title><%= title.join(' - ') %></title>
 
 <!--Favicon-->
-<link rel="icon" href="favicon/favicon.ico">
+<link rel="icon" href="favicon/favicon.png">
 
 <!--Description-->
 <% if (page.description){ %>
@@ -31,11 +31,20 @@
 <!-- Custom CSS -->
 <%- css('css/style') %>
 
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-119065039-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-119065039-1');
+</script>
+
 <script src="https://use.fontawesome.com/b858a7061d.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:300,400|Roboto:300,400" rel="stylesheet">
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
 <script src="/js/script.js"></script>

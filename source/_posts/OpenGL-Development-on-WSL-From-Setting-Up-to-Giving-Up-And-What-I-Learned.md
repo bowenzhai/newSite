@@ -103,7 +103,6 @@ My last resort seems to be Cygwin/X. Installing it was a bit of a pain, since X 
 
 Turns out Cygwin/X has four modes of rendering, each with a different flag to trigger. I tried each and here were the results:
 
-
 | Type     |                       Software                        |          Hardware                                    |
 |:--------:|:-----------------------------------------------------:|:----------------------------------------------------:|
 | indirect (export LIBGL_ALWAYS_INDIRECT=1) |  Error: GLX: Failed to create context: GLXBadFBConfig | Error: Requested OpenGL version 3.3, got version 1.4 |
