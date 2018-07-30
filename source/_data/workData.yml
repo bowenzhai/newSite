@@ -1,32 +1,36 @@
+job4:
+    company: "Microsoft"
+    position: "Rendering Software Engineering"
+    time: "Aug. 2018 - Dec. 2018"
+    location: "Vancouver BC, Canada"
+    description: |-
+        • Incoming intern @ The Coalition Studios
+    imageLink: "/images/ms.jpg"
 job3:
-    company: "IFDS Canada Ltd."
-    position: "R&D Developer"
-    time: "Jan 2018 - Apr. 2018"
+    company: "IFDS"
+    position: "R&D Prototype Engineering"
+    time: "Jan. 2018 - Apr. 2018"
     location: "Toronto ON, Canada"
     description: |-
-        • Developed Node.js local search engine that OCRs and indexes files in Elasticsearch
-        • Architected Spring Boot backend, designed and implemented frontend using Adobe Animate CC and jQuery for a live meeting dashboard
-        • Built an interactive Know your customer visualization using Unity, C# and CouchDB
-        • Worked collaboratively to build and present a Google Home financial voice assistant PoC. Lead the development of Android client using Kotlin and MVP architecture. Constructed the agent using Dialogflow, Firebase fulfillment and Watson API
+        • Node.js and Spring Boot web data viz
+        • AR experience with Unity and Hololens
+        • Google Home voice assistant with Android (Kotlin) companion
     imageLink: "/images/ifds.png"
 job2:
-    company: "SAP Canada Inc."
+    company: "SAP"
     position: "Mobile Developer"
     time: "May 2017 - Aug. 2017"
     location: "Waterloo ON, Canada"
     description: |-
-        • Integrated new features into SAP’s enhanced mobile runtime for web applications
-        • Developed consent plugin for Cordova which enforced transparency and security
-        • Wrote native Android app that achieves CRUD and sync for a CMIS document repo
-        • Enhanced starter apps such as Offline OData for developers using SAP’s mobile SDK
+        • Hybrid mobile development with Cordova
+        • Native Android development with Android Studio
     imageLink: "/images/sap.jpg"
 job1:
-    company: "Veriday Inc."
+    company: "Veriday"
     position: "Software Developer"
     time: "Aug. 2016 - Dec. 2016"
     location: "Mississauga ON, Canada"
     description: |-
-        • Built and maintained websites for large scale financial and banking institutes
-        • Designed and implemented responsive web pages and interactive elements
-        • Developed Chrome extension for Veriday software that sped up production workflow
+        • Front-end web design and development
+        • Chrome extension development
     imageLink: "/images/veriday.png"
