@@ -5,7 +5,7 @@
 		<textarea name="message" placeholder="Your message"></textarea>
 	    <input type="submit" value="Send">
 	</form>
-    <ul>
+    <ul class="personalLinks">
         <% for (var value in site.data.personalLinks) { %>
             <li>
                 <a href="<%- site.data.personalLinks[value].href %>" target="_blank">

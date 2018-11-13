@@ -29,7 +29,7 @@ However, just having imaginary people isn't enough! We also needed data from rea
 
 {% asset_img problems.jpg Problems %}
 
-After interviewing our friends and family who each surprisingly match one of those personas, we concluded that the problems can be summarized into three main points:
+After interviewing our friends and family who each surprisingly match one of those personas, we created an **affinity diagram** and concluded that the problems can be summarized into three main points:
 1. **Safety**: Life is hard, so is driving in traffic.
 2. **Convenience**: Can't plan parking because they're going to be full anyway.
 3. **Cost efficiency**: They make it so hard to pay, might was well not.

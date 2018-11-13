@@ -5,6 +5,7 @@
     var title = [];
     if (page.current > 1) title.push(__('page', page.current));
     if (page.title) title.push(page.title);
+    if (page.archive) title.push('Archive');
     title.push(config.title);
 %>
 <title><%= title.join(' - ') %></title>

@@ -1,14 +1,14 @@
 job4:
     company: "Microsoft"
-    position: "Rendering Software Engineering"
+    position: "Software Engineering Intern"
     time: "Aug. 2018 - Dec. 2018"
     location: "Vancouver BC, Canada"
     description: |-
-        • Incoming intern @ The Coalition Studios
+        • Rendering intern @ The Coalition Studios
     imageLink: "/images/ms.jpg"
 job3:
     company: "IFDS"
-    position: "R&D Prototype Engineering"
+    position: "R&D Developer Intern"
     time: "Jan. 2018 - Apr. 2018"
     location: "Toronto ON, Canada"
     description: |-
@@ -18,7 +18,7 @@ job3:
     imageLink: "/images/ifds.png"
 job2:
     company: "SAP"
-    position: "Mobile Developer"
+    position: "Mobile Developer Intern"
     time: "May 2017 - Aug. 2017"
     location: "Waterloo ON, Canada"
     description: |-
@@ -27,7 +27,7 @@ job2:
     imageLink: "/images/sap.jpg"
 job1:
     company: "Veriday"
-    position: "Software Developer"
+    position: "Software Developer Intern"
     time: "Aug. 2016 - Dec. 2016"
     location: "Mississauga ON, Canada"
     description: |-
