@@ -1,0 +1,22 @@
+<div id="experience-div">
+    <h3>Real places I worked at</h3>
+    <div id="experience-container">
+        <% for (var value in site.data.experienceData) { %>
+            <div>
+                <img src="<%- site.data.experienceData[value].imageLink %>">
+                <p>
+                    <b><%- site.data.experienceData[value].company %></b>
+                    <br>
+                    <%- site.data.experienceData[value].position %>
+                    <br>
+                    <%- site.data.experienceData[value].time %>
+                    <br>
+                    <%- site.data.experienceData[value].location %>
+                </p>
+                <p>
+                    <%- site.data.experienceData[value].description.replace(/\n/g, "<br>") %>
+                </p>
+            </div>
+        <% } %>
+    </div>
+</div>

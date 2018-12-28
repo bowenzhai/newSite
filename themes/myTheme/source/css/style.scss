@@ -195,7 +195,7 @@ body {
         }
     }
 
-    #portfolio-div {
+    #project-div {
 
         #project-container {
             display: flex;
@@ -237,8 +237,8 @@ body {
         }
     }
 
-    #work-div {
-        #work-container {
+    #experience-div {
+        #experience-container {
             div {
                 display: flex;
                 padding-bottom: 10%;
@@ -385,7 +385,7 @@ body {
     }
 
 
-    .post {
+    .blog {
         text-align: left;
         margin-bottom: 100px;
 
@@ -430,8 +430,8 @@ body {
             display: none;
         }
 
-        #work-div {
-            #work-container {
+        #experience-div {
+            #experience-container {
                 div {
                     flex-wrap: wrap;
 
@@ -494,7 +494,7 @@ body {
             }
         }
 
-        #portfolio-div {
+        #project-div {
             img {
                 width: 140px;
                 height: 140px;
@@ -507,8 +507,8 @@ body {
             }
         }
 
-        #work-div {
-            #work-container {
+        #experience-div {
+            #experience-container {
                 div {
                     img {
                         margin: 0 auto 30px auto;
@@ -542,7 +542,7 @@ body {
             font-size: 13px;
         }
 
-        #portfolio-div {
+        #project-div {
             img {
                 width: 120px;
                 height: 120px;
@@ -560,7 +560,7 @@ body {
             font-size: 11px;
         }
 
-        #portfolio-div {
+        #project-div {
             img {
                 width: 100px;
                 height: 100px;

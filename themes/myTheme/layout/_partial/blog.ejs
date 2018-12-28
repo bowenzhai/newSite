@@ -4,25 +4,29 @@
         <% var shown = 0; %>
         <% page.posts.each(function(post){ %>
             <% if (shown < 3) { %>
-                <div class="post">
-                    <h5>
-                        <%= date(post.date, config.date_format) %>
-                    </h5>
-                    <h4>
-                        <a href="<%- url_for(post.path) %>">
-                            <%= post.title %>
-                        </a>
-                    </h4>
-                    <% if(post.excerpt) { %>
-                        <p>
-                            <%- post.excerpt %>
-                            <a href="<%- url_for(post.path) %>">
-                                ...Read More
-                            </a>
-                        </p>
+                <% post.categories.forEach(function(item){ %>
+                    <% if (item.name == "blog") { %>
+                        <div class="blog">
+                            <h5>
+                                <%= date(post.date, config.date_format) %>
+                            </h5>
+                            <h4>
+                                <a href="<%- url_for(post.path) %>">
+                                    <%= post.title %>
+                                </a>
+                            </h4>
+                            <% if(post.excerpt) { %>
+                                <p>
+                                    <%- post.excerpt %>
+                                    <a href="<%- url_for(post.path) %>">
+                                        ...Read More
+                                    </a>
+                                </p>
+                            <% } %>
+                        </div>
+                        <% ++shown; %>
                     <% } %>
-                </div>
-                <% ++shown; %>
+                <% }); %>
             <% } %>
         <% }) %>
     </div>

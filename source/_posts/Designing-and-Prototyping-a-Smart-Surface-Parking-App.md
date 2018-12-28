@@ -1,7 +1,8 @@
 ---
 title: Designing and Prototyping a Smart Surface Parking App
 date: 2018-07-29 12:12:03
-tags:
+categories:
+- blog
 ---
 If you drive a car, then there must be countless times when you arrive at your destination but spend more time than you want circling around in attempt to find parking. Not only does it contribute to traffic congestion, more air pollution is produced due to the sheer number of idling cars.<!-- more -->
 

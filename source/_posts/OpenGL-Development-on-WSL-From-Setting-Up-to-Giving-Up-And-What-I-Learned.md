@@ -1,7 +1,8 @@
 ---
 title: 'OpenGL Development on WSL: From Setting Up to Giving Up (And What I Learned)'
 date: 2018-04-15 17:53:33
-tags:
+categories:
+- blog
 ---
 One of my goals in the foreseeable future is to really delve into the world of 3D programming. After getting a taste of the basics of 3D in Blender and Unity, it seems like the logical next step is to learn to program using a graphics API in order to understand what those software truly abstracts away form us.<!-- more -->
 
