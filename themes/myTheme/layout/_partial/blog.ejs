@@ -1,9 +1,9 @@
 <div id="blog-div">
     <h3>My thoughts in text form</h3>
     <div>
-        <% var shown = 0; %>
+        <% var shownBlogs = 0; %>
         <% page.posts.each(function(post){ %>
-            <% if (shown < 3) { %>
+            <% if (shownBlogs < 3) { %>
                 <% post.categories.forEach(function(item){ %>
                     <% if (item.name == "blog") { %>
                         <div class="blog">
@@ -24,7 +24,7 @@
                                 </p>
                             <% } %>
                         </div>
-                        <% ++shown; %>
+                        <% ++shownBlogs; %>
                     <% } %>
                 <% }); %>
             <% } %>

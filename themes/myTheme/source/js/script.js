@@ -32,12 +32,20 @@ $(function() {
 		var translation = "translateY(" + translateAmout + "px)";
 		$("#side-nav-links").css("transform", translation);
 	}
-
+/*
 	// project hover
 	$("#project-container img").each(function (index) {
 		$(this).hover(function() {
 			$("#project-description div").css("opacity", 0);
 			$("#project-description div").eq(index).css("opacity", 1);
+		});
+	});
+*/
+	// photo hover
+	$(".image-container img").each(function (index) {
+		$(this).hover(function() {
+			$(".image-description div").css("opacity", 0);
+			$(".image-description div").eq(index).css("opacity", 1);
 		});
 	});
 });

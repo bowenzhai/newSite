@@ -1,0 +1,80 @@
+<div id="gallery-div">
+    <h3>Through the lens</h3>
+
+    <div class="image-container">
+        <% var shownPhotos = 0; %>
+        <% page.posts.each(function(post){ %>
+            <% if (shownPhotos < 3) { %>
+                <% post.categories.forEach(function(item){ %>
+                    <% if (item.name == "photo") { %>
+                        <div>
+                            <% if(post.cover_image) { %>
+                                <a href="<%- url_for(post.path) %>">
+                                    <img src="<%- url_for(post.path) + 'thumb-' + url_for(post.cover_image).substr(1) %>">
+                                </a>
+                            <% } %>
+                        </div>
+                        <% ++shownPhotos; %>
+                    <% } %>
+                <% }); %>
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="image-description">
+        <% var shownPhotos = 0; %>
+        <% page.posts.each(function(post){ %>
+            <% if (shownPhotos < 3) { %>
+                <% post.categories.forEach(function(item){ %>
+                    <% if (item.name == "photo") { %>
+                        <div>
+                            <h4><%- post.title %></h4>
+                            <hr>
+                            <h5><%- date(post.date, config.date_format) %></h5>
+                        </div>
+                        <% ++shownPhotos; %>
+                    <% } %>
+                <% }); %>
+            <% } %>
+        <% }) %>
+    </div>
+    <h3>Under the pentip</h3>
+
+    <div class="image-container">
+        <% var shownDrawings = 0; %>
+        <% page.posts.each(function(post){ %>
+            <% if (shownDrawings < 3) { %>
+                <% post.categories.forEach(function(item){ %>
+                    <% if (item.name == "drawing") { %>
+                        <div>
+                            <% if(post.cover_image) { %>
+                                <a href="<%- url_for(post.path) %>">
+                                    <img src="<%- url_for(post.path) + 'thumb-' + url_for(post.cover_image).substr(1) %>">
+                                </a>
+                            <% } %>
+                        </div>
+                        <% ++shownDrawings; %>
+                    <% } %>
+                <% }); %>
+            <% } %>
+        <% }) %>
+    </div>
+    <div class="image-description">
+        <% var shownDrawings = 0; %>
+        <% page.posts.each(function(post){ %>
+            <% if (shownDrawings < 3) { %>
+                <% post.categories.forEach(function(item){ %>
+                    <% if (item.name == "drawing") { %>
+                        <div>
+                            <h4><%- post.title %></h4>
+                            <hr>
+                            <h5><%- date(post.date, config.date_format) %></h5>
+                        </div>
+                        <% ++shownDrawings; %>
+                    <% } %>
+                <% }); %>
+            <% } %>
+        <% }) %>
+    </div>
+
+    <a href="/gallery">Full gallery</a>
+</div>

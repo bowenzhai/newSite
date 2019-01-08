@@ -1,6 +1,6 @@
 ---
 title: 'OpenGL Development on WSL: From Setting Up to Giving Up (And What I Learned)'
-date: 2018-04-15 17:53:33
+date: 2018-04-15
 categories:
 - blog
 ---

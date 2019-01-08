@@ -5,6 +5,7 @@ $light: 300;
 $grey: #E0E0E0;
 $bluegrey: #828A9E;
 $mutedred: #C26868;
+$darkred: #823333;
 $darkgrey: #222222;
 
 body {
@@ -15,7 +16,7 @@ body {
     margin: 0;
 
     a {
-        color: $mutedred;
+        color: $darkred;
         text-decoration: none;
     }
 
@@ -40,6 +41,11 @@ body {
     }
 
     h5 {
+        font-weight: $light;
+        font-size: 14px;
+    }
+
+    h6 {
         font-weight: $light;
         font-size: 12px;
     }
@@ -194,7 +200,7 @@ body {
             left: 0;
         }
     }
-
+/*
     #project-div {
 
         #project-container {
@@ -236,7 +242,7 @@ body {
             }
         }
     }
-
+*/
     #experience-div {
         #experience-container {
             div {
@@ -270,6 +276,68 @@ body {
     #blog-div {
         > a {
             text-transform: uppercase;
+        }
+    }
+
+    #gallery-div {
+        > a {
+            text-transform: uppercase;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        img {
+            height: 200px;
+            transition: all 0.5s;
+            position: relative;
+            top: 10px;
+            left: 10px;
+            margin-bottom: 20%;
+        }
+
+        img:hover {
+            top: 5px;
+            left: 5px;
+            box-shadow: 10px 10px 50px -6px rgba(120,120,120,1);
+        }
+
+        .image-description {
+            position: relative;
+            height: 180px;
+
+            div {
+                opacity: 0;
+                top: 0;
+                position: absolute;
+                width: 70%;
+                height: 100%;
+                left: 0;
+                right: 0;
+                margin: auto;
+                transition: opacity 0.5s;
+            }
+        }
+    }
+
+    #gallery-full-div {
+        h5, h6 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        img {
+            height: 200px;
+            margin-top: 20px;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
         }
     }
 
@@ -565,6 +633,21 @@ body {
                 width: 100px;
                 height: 100px;
             }
+        }
+    }
+
+    /*light gallery*/
+    > .lg-backdrop {
+        padding: initial;
+    }
+
+    > .lg-outer {
+        padding: initial;
+        text-align: initial;
+        background: none!important;
+
+        div {
+            padding: initial;
         }
     }
 }

@@ -1,0 +1,52 @@
+<nav id="top-nav">
+    <a href='/'>Home</a>
+    <a href='/archives'>Archive</a>
+</nav>
+<div id="gallery-full-div">
+    <h3>Gallery</h3>
+    <h4>Photos</h4>
+    <p>Not a professional by any means but I like to record my journeys. My workflow is fully mobile!</p>
+    <div class="image-container">
+        <% site.posts.sort('date', -1).each(function(post){ %>
+            <% post.categories.forEach(function(item){ %>
+                <% if (item.name == "photo") { %>
+                    <div>
+                        <% if(post.cover_image) { %>
+                            <a href="<%- url_for(post.path) %>">
+                                <img src="<%- url_for(post.path) + 'thumb-' + url_for(post.cover_image).substr(1) %>">
+                            </a>
+                        <% } %>
+                        <div>
+                        <a href="<%- url_for(post.path) %>">
+                            <h5><%- post.title %></h5>
+                        </a>
+                        <h6><%- date(post.date, config.date_format) %></h6>
+                    </div>
+                    </div>
+                <% } %>
+            <% }); %>
+        <% }) %>
+    </div>
+    <h4>Drawings</h4>
+    <div class="image-container">
+        <% site.posts.sort('date', -1).each(function(post){ %>
+            <% post.categories.forEach(function(item){ %>
+                <% if (item.name == "drawing") { %>
+                    <div>
+                        <% if(post.cover_image) { %>
+                            <a href="<%- url_for(post.path) %>">
+                                <img src="<%- url_for(post.path) + 'thumb-' + url_for(post.cover_image).substr(1) %>">
+                            </a>
+                        <% } %>
+                        <div>
+                        <a href="<%- url_for(post.path) %>">
+                            <h5><%- post.title %></h5>
+                        </a>
+                        <h6><%- date(post.date, config.date_format) %></h6>
+                    </div>
+                    </div>
+                <% } %>
+            <% }); %>
+        <% }) %>
+    </div>
+</div>

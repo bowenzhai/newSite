@@ -1,6 +1,6 @@
 ---
 title: Designing and Prototyping a Smart Surface Parking App
-date: 2018-07-29 12:12:03
+date: 2018-07-29
 categories:
 - blog
 ---
