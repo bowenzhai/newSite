@@ -450,6 +450,20 @@ body {
         figure {
             overflow: auto;
         }
+
+        .image-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+
+            img {
+                max-height: 300px;
+            }
+
+            h5 {
+                text-align: center;
+            }
+        }
     }
 
 
