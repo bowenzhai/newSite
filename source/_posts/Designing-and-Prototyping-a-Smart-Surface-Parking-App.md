@@ -4,7 +4,7 @@ date: 2018-07-29
 categories:
 - blog
 ---
-If you drive a car, then there must be countless times when you arrive at your destination but spend more time than you want circling around in attempt to find parking. Not only does it contribute to traffic congestion, more air pollution is produced due to the sheer number of idling cars.<!-- more -->
+<p>If you drive a car, then there must be countless times when you arrive at your destination but spend more time than you want circling around in attempt to find parking. Not only does it contribute to traffic congestion, more air pollution is produced due to the sheer number of idling cars.</p><!-- more -->
 
 Our team, fittingly named UXeleration, was presented an opportunity to design and prototype an app from the ground up, for those who frequently need to park in large cities.
 
@@ -98,8 +98,11 @@ Throughout the whole process we really saw how our designs evolved. Since we had
 
 It is also quite apparent that finding parking is still a pain point for drivers, especially those who frequent urban areas. So with the idea that there will be sensors embedded in parking lots to figure out when a parking spot becomes free, we will definitely set out to create the app!
 
-<iframe width="100%" height="315" src="https://www.youtube-nocookie.com/embed/Tjbv5i5CUO8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
 <br>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/Tjbv5i5CUO8" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-<iframe style="border: none;" width="100%" height="1200" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/V2PCawfIYX0XfIFwbrxMwk71/UXeleration?node-id=16%3A227&scaling=scale-down" allowfullscreen></iframe>
+<div class="video">
+<iframe style="border: none;" width="560" height="1100" src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/V2PCawfIYX0XfIFwbrxMwk71/UXeleration?node-id=16%3A227&scaling=scale-down" allowfullscreen></iframe>
+</div>

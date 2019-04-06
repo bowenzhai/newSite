@@ -5,14 +5,14 @@ tags:
 categories:
 - blog
 ---
-At long last, in my forth year at University of Waterloo I have taken the infamous CS 488, better known as Computer Graphics, which teaches us both real time rendering as well as ray tracing. It is almost a cumulation of my undergrad CS (un)learnings including C++, linear algebra, parametric equations and the like.<!-- more -->
+<p>At long last, in my forth year at University of Waterloo I have taken the infamous CS 488, better known as Computer Graphics, which teaches us both real time rendering as well as ray tracing. It is almost a cumulation of my undergrad CS (un)learnings including C++, linear algebra, parametric equations and the like.</p><!-- more -->
 
-For our final project we get to choose from either an OpenGL project or a ray tracer. I chose to make a ray tracer due to several reasons. As a first timer in ray tracing it is quite a departure from the forward pipline and I was quite amazed by the various techniques used to generate photo-realistic images. Secondly, I have made a Dark Samus model from the hierarical modelling assignment that looks quite off but is fully articulable, which I could use in the final rendering. Finally, one of my recent areas of exploration is computer animation, seeing that I will be working on EA's Frostbite animation team this summer, it would be nice to use this oppurtunity to create animation from scratch.
+For our final project we get to choose from either an OpenGL project or a ray tracer. I chose to make a ray tracer due to several reasons. As a first timer in ray tracing it is quite a departure from the forward pipeline and I was quite amazed by the various techniques used to generate photo-realistic images. Secondly, I have made a Dark Samus model from the hierarchal modelling assignment that looks quite off but is fully articulable, which I could use in the final rendering. Finally, one of my recent areas of exploration is computer animation, seeing that I will be working on EA's Frostbite animation team this summer, it would be nice to use this opportunity to create animation from scratch.
 
-My final ray tracer not only can render specific scenes described by Lua scripts, but also supports commands to render animation. We each also got to pick 10 graphical objectives for grading. I have decided to implement he following objectives to create the final scene. 
+My final ray tracer not only can render specific scenes described by Lua scripts, but also supports commands to render animation. We each also got to pick 10 graphical objectives for grading. I have decided to implement the following objectives to create the final scene. 
 
 ## Ray Tracing Primitives
-The ray tracer supports the following perimitives: sphere, cube, cylinder and torus. The intersection calculation with each primitive can be defined by a formula [1] which I found to be useful. It also supports transformations of each primitive.
+The ray tracer supports the following primitives: sphere, cube, cylinder and torus. The intersection calculation with each primitive can be defined by a formula [1] which I found to be useful. It also supports transformations of each primitive.
 
 {% asset_img Primitives.png Primitives %}
 
@@ -22,12 +22,12 @@ In real life many objects have a surface that reflects rays at an angle same as 
 {% asset_img Reflection.png Reflection %}
 
 ## Glossy Reflection
-Not all surfaces have a smooth surface normal that is exactly the same as the primitives, however. The ray tracer simulates a glossy effect bt perturbing the intersect normal. If the material has a glossy factor, the perturbed surface normal is obtained by rotating by polar angle α = arccos(1-x_1)^(1/2) and azimuthal angle β = 2πx_2 where x_1 and x_2 are random numbers between [0, 1].
+Not all surfaces have a smooth surface normal that is exactly the same as the primitives, however. The ray tracer simulates a glossy effect by perturbing the intersect normal. If the material has a glossy factor, the perturbed surface normal is obtained by rotating by polar angle α = arccos(1-x_1)^(1/2) and azimuthal angle β = 2πx_2 where x_1 and x_2 are random numbers between [0, 1].
 
 {% asset_img Glossy_Reflection.png Glossy Reflection %}
 
 ## Refraction
-Another property that some real-life objects have is refraction. When the ray goes from one medium to another, the ratio of the sines of the angles of incidence and refraction is equivalent to the reciprocal of the ratio of the indices of refraction. This is known as Snell's Law (n_i sin θ_i = n_t sin θ_t). In graphics land we assume air is vaccum with index of refraction 1. The tecnique is simliar to reflection where we generate secondary refraction rays.
+Another property that some real-life objects have is refraction. When the ray goes from one medium to another, the ratio of the sines of the angles of incidence and refraction is equivalent to the reciprocal of the ratio of the indices of refraction. This is known as Snell's Law (n_i sin θ_i = n_t sin θ_t). In graphics land we assume air is vacuum with index of refraction 1. The technique is similar to reflection where we generate secondary refraction rays.
 
 {% asset_img Refraction.png Refraction %}
 
@@ -43,7 +43,7 @@ Shadows in ray tracing are determined when the ray from the intersection point t
 {% asset_img Soft_Shadows.png Soft Shadows %}
 
 ## Texture Mapping
-By mapping a primitive's UV coordinates to its material's tenture coordinates, it is able to set the diffuse color of the surface[4]. The acquired color from the texture if interpolated from a few neighbouring pixels. Each primitive has their own formula of finding their UVs. 
+By mapping a primitive's UV coordinates to its material's texture coordinates, it is able to set the diffuse color of the surface[4]. The acquired color from the texture if interpolated from a few neighbouring pixels. Each primitive has their own formula of finding their UVs. 
 
 {% asset_img Texture.png Soft Texture Mapping %}
 
@@ -70,9 +70,21 @@ The ray tracer supports keyframe animation. The intermediate frames are interpol
 ## The Final Scene
 As a tribute to the video game “Metroid Prime 2” for the Nintendo GameCube, the final rendered animation is set in an enclosed, underground mechanical area with lighting and transparent tube structures. It describes an encounter between bounty hunter Samus Aran and her doppelganger Dark Samus.
 
+{% asset_img Final_Scene.png Final Scene %}
+
+<br>
+<div class="video">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SjcQWTjJyx8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+
 ## References
+
 [1] https://www.cl.cam.ac.uk/teaching/1999/AGraphHCI/SMAG/node2.html
+
 [2] http://inst.cs.berkeley.edu/~cs294-13/fa09/lectures/cookpaper.pdf
+
 [3] http://artis.imag.fr/Members/David.Roger/whitted.pdf
+
 [4] https://cumincad.architexturez.net/system/files/pdf/186e.content.pdf
+
 [5] https://www.w3.org/TR/css-easing-1/ 

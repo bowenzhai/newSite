@@ -4,7 +4,7 @@ date: 2018-04-15
 categories:
 - blog
 ---
-One of my goals in the foreseeable future is to really delve into the world of 3D programming. After getting a taste of the basics of 3D in Blender and Unity, it seems like the logical next step is to learn to program using a graphics API in order to understand what those software truly abstracts away form us.<!-- more -->
+<p>One of my goals in the foreseeable future is to really delve into the world of 3D programming. After getting a taste of the basics of 3D in Blender and Unity, it seems like the logical next step is to learn to program using a graphics API in order to understand what those software truly abstracts away form us.</p><!-- more -->
 
 To me (and probably anyone who's also looking to get into graphics), here's a great source of motivation:
 > Computer graphics is one of the most bad ass, algorithmically and mathematically challenging fields you can do in Computer Science.
